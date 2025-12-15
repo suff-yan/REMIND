@@ -6,7 +6,7 @@ The project uses an **agentic approach** — the AI not only responds to user qu
 
 The assistant maintains a structured memory of past interactions, identifies key learning points, and, after a certain interval, generates personalized recall questions. This approach reinforces long-term memory retention, similar to how human tutors use spaced repetition.
 
-The system can be run as a command-line chatbot or integrated with front-end tools like **Streamlit** or **Gradio** for an interactive experience. It can also evaluate user responses, give feedback, and adapt its questioning style based on user performance.
+The system can be run as a command-line chatbot or integrated with front-end tools like **Streamlit**  for an interactive experience. It can also evaluate user responses, give feedback, and adapt its questioning style based on user performance.
 
 ---
 
@@ -22,15 +22,15 @@ The system can be run as a command-line chatbot or integrated with front-end too
 ## 🧰 Technologies Used
 - **Language:** Python  
 - **Libraries:** `openai`, `random`, `json`  
-- **Model:** OpenAI GPT model (e.g., `gpt-4o-mini`)  
-- *(Optional)* `streamlit` or `gradio` for UI  
+- **Model:** gemini GPT model (e.g., `gemini-2.5-flash-lite`)  
+- *(Optional)* `streamlit` for UI  
 
 ---
 
 ## 🎯 Project Level
-**Level:** Intermediate  
+**Level:** Beginner  
 > Suitable for learners familiar with Python basics and interested in building intelligent, memory-aware chat applications.  
-> *(Beginners can also follow along with provided Week 1 learning resources.)*
+
 
 ---
 
