@@ -55,7 +55,10 @@ class SpacedRepetitionEnv:
         self.n_reviews += 1
         self.streak = self.streak + 1 if grade != FORGOT else 0
         self.grade = grade
-        r = reward(self.reward_mode, gap, grade, **self.reward_kwargs)
+        if callable(self.reward_mode):          # your own reward function(gap, grade) -> float
+            r = self.reward_mode(gap, grade)
+        else:
+            r = reward(self.reward_mode, gap, grade, **self.reward_kwargs)
         done = self.day >= self.horizon
         if done:
             self.exam_passed = grade != FORGOT

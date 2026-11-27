@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@theme {
+  --color-paper: #FAFAF8;
+  --color-stone: #F2F1ED;
+  --color-charcoal: #16181D;
+  --color-ink: #141413;
+  --color-slate: #575651;
+  --color-cobalt: #1D4ED8;
+  --color-amber: #D97706;
+  --color-rule: #E2E0D8;
+  --font-serif: "Newsreader Variable", Georgia, serif;
+  --font-sans: "Inter Variable", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+}
+
+@layer base {
+  html { background: var(--color-paper); color: var(--color-ink); }
+  body { font-family: var(--font-sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #DCE5FB; }
+  a { color: var(--color-cobalt); text-underline-offset: 3px; }
+  :focus-visible { outline: 2px solid var(--color-cobalt); outline-offset: 2px; }
+}
+
+/* ---------- prose ---------- */
+.prose { max-width: 70ch; }
+.prose h2 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; line-height: 1.25; margin: 2.4rem 0 .75rem; letter-spacing: -.01em; scroll-margin-top: 6rem; }
+.prose h3 { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; margin: 1.8rem 0 .5rem; scroll-margin-top: 6rem; }
+.prose p { margin: 0 0 1rem; }
+.prose ul, .prose ol { margin: 0 0 1rem 1.25rem; }
+.prose ul { list-style: disc; } .prose ol { list-style: decimal; }
+.prose li { margin: .25rem 0; padding-left: .25rem; }
+.prose li::marker { color: var(--color-slate); }
+.prose strong { font-weight: 600; }
+.prose a { text-decoration: underline; text-decoration-color: #9DB3F0; }
+.prose a:hover { text-decoration-color: var(--color-cobalt); }
+.prose blockquote { border-left: 2px solid var(--color-amber); padding: .25rem 0 .25rem 1rem; color: var(--color-slate); margin: 1.25rem 0; }
+.prose code { font-family: var(--font-mono); font-size: .86em; background: var(--color-stone); border: 1px solid var(--color-rule); padding: .05em .3em; border-radius: 3px; }
+.prose pre { background: var(--color-charcoal); color: #E6E6E1; border-radius: 4px; padding: 1rem 1.15rem; overflow-x: auto; margin: 1.25rem 0; font-size: .86rem; line-height: 1.6; }
+.prose pre code { background: none; border: 0; padding: 0; color: inherit; font-size: inherit; }
+.prose table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: .93rem; }
+.prose th { text-align: left; font-weight: 600; border-bottom: 1px solid var(--color-ink); padding: .4rem .6rem .4rem 0; }
+.prose td { border-bottom: 1px solid var(--color-rule); padding: .45rem .6rem .45rem 0; vertical-align: top; }
+.prose hr { border: 0; border-top: 1px solid var(--color-rule); margin: 2rem 0; }
+.prose .katex-display { margin: 1.25rem 0; overflow-x: auto; overflow-y: hidden; }
+.prose img { max-width: 100%; border: 1px solid var(--color-rule); }
+
+/* highlight.js tokens on charcoal */
+.hljs-keyword, .hljs-built_in, .hljs-literal { color: #8FB4FF; }
+.hljs-string { color: #E9C46A; }
+.hljs-number { color: #F4A261; }
+.hljs-comment { color: #8A8A84; font-style: italic; }
+.hljs-title, .hljs-title.function_ { color: #C9DAFF; }
+.hljs-params { color: #E6E6E1; }
+
+.eyebrow { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--color-slate); }
+.btn { display: inline-flex; align-items: center; gap: .4rem; font-size: .9rem; font-weight: 500; padding: .45rem .85rem; border-radius: 4px; border: 1px solid var(--color-rule); background: #fff; color: var(--color-ink); cursor: pointer; }
+.btn:hover { border-color: #C9C6BA; }
+.btn-primary { background: var(--color-cobalt); border-color: var(--color-cobalt); color: #fff; }
+.btn-primary:hover { background: #1A43BE; border-color: #1A43BE; }
+.btn:disabled { opacity: .5; cursor: default; }
+.input { font-family: var(--font-mono); font-size: .9rem; background: #fff; border: 1px solid var(--color-rule); border-radius: 4px; padding: .4rem .6rem; }
+.input:focus { outline: none; border-color: var(--color-cobalt); box-shadow: 0 0 0 1px var(--color-cobalt); }
+.panel { background: var(--color-stone); border: 1px solid var(--color-rule); border-radius: 6px; }
+.bar { height: 4px; background: var(--color-rule); border-radius: 2px; overflow: hidden; }
+.bar > span { display: block; height: 100%; background: var(--color-cobalt); }
