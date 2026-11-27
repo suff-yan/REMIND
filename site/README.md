@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Re-Mind course website
 
-## Getting Started
+Next.js 16 · Tailwind 4 · Supabase · self-hosted Pyodide. Content lives in `content/` (one Markdown file per section:
+prose below, quiz / checkpoint / links in the front matter), so mentors can edit without touching code.
 
-First, run the development server:
-
+## Run locally (no setup needed)
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev            # http://localhost:3000, data goes to .data/dev-db.json
+python3 scripts/check-content.py   # validates every quiz and checkpoint against mentor_solutions/
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Mentor dashboard locally: `/mentor`, passcode `mentor` (dev only).
 
 ## Deploy on Vercel
+1. Vercel → Add New → Project → import `suff-yan/REMIND`. **Root Directory: `site`.**
+2. Environment variables (Settings → Environment Variables), then Deploy:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Name | Value |
+|---|---|
+| `SUPABASE_URL` | `https://jbnhduvvqjndedwhjwtr.supabase.co` |
+| `SUPABASE_SERVICE_ROLE_KEY` | Supabase → Project Settings → API keys → secret / service_role |
+| `SESSION_SECRET` | output of `openssl rand -hex 32` |
+| `MENTOR_PASSCODE` | a long passphrase shared with mentors |
+| `ALLOWLIST_ENABLED` | `false` now; `true` after uploading the selected roll numbers on `/mentor` |
+| `SMTP_HOST` / `SMTP_PORT` | `smtp.gmail.com` / `465` |
+| `SMTP_USER` / `SMTP_PASS` | `sufiyanstudies@gmail.com` / its 16-character app password |
+| `MAIL_FROM` | `Re-Mind WiDS <sufiyanstudies@gmail.com>` |
+| `MAIL_REPLY_TO` | `24b0935@iitb.ac.in` |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Without the Supabase variables the site still renders, but profiles cannot be saved on Vercel.
+
+## Database
+`supabase/schema.sql` — already applied to the project. Re-running it is safe.
+
+## Editing content
+- New section: add `content/w<N>/<order>-<slug>.md`. Front matter: `title`, `minutes`, optional `video`
+  (file name in `public/videos/` without extension), `checkpoint`, `quiz`, `resources`.
+- Browser checkpoints: put a reference solution in `../mentor_solutions/checkpoints/<week>-<slug>.py` and run
+  `python3 scripts/check-content.py`; it must report the starter failing and the solution passing.
+- Quiz option order is shuffled per question on the page, so write the correct answer anywhere.
