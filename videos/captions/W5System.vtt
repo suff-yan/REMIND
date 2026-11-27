@@ -1,0 +1,46 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.800
+One concept's life.
+
+2
+00:00:03.400 --> 00:00:07.833
+You ask a question, and Gemini answers it, directly or Socratically.
+
+3
+00:00:07.833 --> 00:00:16.133
+Gemini also extracts the concept you learned, as JSON, and the tutor stores it with a streak and a last grade.
+
+4
+00:00:16.133 --> 00:00:21.733
+The reinforcement learning agent looks at that state and picks how long to wait.
+
+5
+00:00:21.733 --> 00:00:28.500
+When the concept is due, the tutor interrupts you with a recall check. Nobody asked it to.
+
+6
+00:00:28.500 --> 00:00:31.800
+Gemini grades your answer zero, one or two.
+
+7
+00:00:31.800 --> 00:00:38.933
+The grade and the days you actually waited become the reward. One Q update, and a new gap.
+
+8
+00:00:38.933 --> 00:00:44.533
+Then the loop repeats, and each time the agent knows you a little better.
+
+9
+00:00:46.133 --> 00:00:55.200
+Learning from scratch on one person would take months. So the agent pre-trains on simulated students, then keeps learning from your real grades.
+
+10
+00:00:55.200 --> 00:01:02.333
+It works because the live tutor uses the same eighteen states and the same reward as the simulator.
+
+11
+00:01:02.333 --> 00:01:10.233
+And for demos, one line in the env file makes a tutor day last one minute. Now go build yours.
+

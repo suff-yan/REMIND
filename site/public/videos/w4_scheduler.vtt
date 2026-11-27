@@ -1,0 +1,38 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.267
+Teaching a scheduler, and watching it cheat.
+
+2
+00:00:03.867 --> 00:00:13.700
+The agent only sees what a real tutor could: the streak of correct answers and the last grade. Its action is how long to wait.
+
+3
+00:00:13.700 --> 00:00:22.367
+The reward: waited fourteen days and still remembered? You proved fourteen days of memory. Forgetting costs double, and every review costs effort.
+
+4
+00:00:23.967 --> 00:00:34.967
+Same Q-learning as the gridworld. At first it guesses badly and students forget. Within about fifteen thousand students, the return climbs and settles. Five seconds on a laptop.
+
+5
+00:00:36.567 --> 00:00:46.400
+Fixed schedules trade effort for recall along a curve. Every day is near perfect, but costs sixty reviews. Leitner sits at ninety-three percent with ten.
+
+6
+00:00:46.400 --> 00:00:55.467
+The learned scheduler lands top-left: ninety-seven percent recall with under twelve reviews. Same recall as every two days, with sixty percent less effort.
+
+7
+00:00:55.967 --> 00:01:05.033
+Now change the reward. Plus one per correct answer sounds right, but the agent quizzes you almost every day: easy points, huge workload.
+
+8
+00:01:05.033 --> 00:01:11.033
+Reward long gaps instead, and it simply never quizzes you. Recall collapses to twenty-two percent.
+
+9
+00:01:11.033 --> 00:01:18.167
+Reinforcement learning optimises exactly what you reward, not what you meant. Designing the reward is the real work.
+

@@ -1,0 +1,38 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.133
+From chatbot to agent.
+
+2
+00:00:02.733 --> 00:00:11.800
+A chatbot answers and waits. An agent runs a loop: it perceives what's happening, decides what to do, acts, and remembers what happened.
+
+3
+00:00:11.800 --> 00:00:19.333
+Gemini is the brain, a JSON file is the memory, and the quiz writer and grader are its tools.
+
+4
+00:00:19.333 --> 00:00:27.633
+The interesting part is decide. This week it's a rule we write. By week five, a reinforcement learning agent learns it.
+
+5
+00:00:28.233 --> 00:00:36.533
+Trigger one, a counter. After every five questions, the bot picks one of them at random and quizzes you on it.
+
+6
+00:00:37.533 --> 00:00:45.833
+Trigger two, a clock. On every rerun, the bot checks whether a question is ten minutes old and not yet quizzed.
+
+7
+00:00:47.833 --> 00:00:52.267
+If one is, the bot interrupts you, before you've even typed.
+
+8
+00:00:52.867 --> 00:01:02.700
+A prose grade is fine for a human but awful for code. Ask Gemini for JSON instead, and you get a number you can store.
+
+9
+00:01:02.700 --> 00:01:11.767
+Three grades: zero, one and two. Remember them. In week five they become what the agent observes, and the reward it learns from.
+
