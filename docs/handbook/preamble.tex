@@ -1,0 +1,79 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.3cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tcolorbox}
+\usepackage[htt]{hyphenat}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{float}
+
+\graphicspath{{../../assets/}}
+
+% ---------- running header (same as last year) ----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textit{WiDS 2026}}
+\fancyhead[R]{\textit{Re-Mind}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ---------- big centred sections with a cheeky subtitle ----------
+\titleformat{\section}{\normalfont\Large\bfseries\filcenter}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{0.4em}{0.5em}
+\usepackage{needspace}
+\usepackage{tocloft}
+\setlength{\cftbeforesecskip}{3pt}
+\newcommand{\bigsection}[2]{%
+  \par\Needspace{12\baselineskip}\bigskip\noindent\rule{\linewidth}{0.4pt}\par
+  \vspace{-0.4em}%
+  \section{#1}%
+  {\centering\textbf{#2}\par}%
+  \vspace{0.3em}\noindent\rule{\linewidth}{0.4pt}\par\medskip}
+
+\setlist[itemize]{leftmargin=1.4em, itemsep=0.35em}
+
+% ---------- week banner ----------
+\newcommand{\weekbanner}[3]{%
+  \clearpage
+  \begin{center}
+  {\small\scshape Winter in Data Science \,·\, Re-Mind 2.0}\\[0.6em]
+  {\Huge\bfseries #1}\\[0.4em]
+  {\Large #2}\\[0.8em]
+  \begin{minipage}{0.82\linewidth}\centering\itshape #3\end{minipage}
+  \end{center}
+  \vspace{0.4em}}
+
+% ---------- code ----------
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\bfseries,
+  commentstyle=\itshape\color{black!60},
+  stringstyle=\color{black!80},
+  numbers=left, numberstyle=\tiny, numbersep=6pt,
+  columns=fullflexible, keepspaces=true,
+  breaklines=true, showstringspaces=false,
+  frame=none, xleftmargin=1.5em,
+  aboveskip=0.6em, belowskip=0.6em,
+  literate={→}{$\rightarrow$}1 {—}{---}1
+}
+\lstdefinestyle{shell}{language=bash, numbers=none, xleftmargin=1.5em}
+
+% ---------- boxes ----------
+\newtcolorbox{task}[1]{colback=white, colframe=black, boxrule=0.5pt, arc=0pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt, title={\textbf{#1}}, coltitle=black, colbacktitle=black!8}
+\newtcolorbox{note}{colback=black!4, colframe=black!4, arc=0pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
+
+% function-table rows like last year
+\newcommand{\fnrow}[4]{\textbf{Function / Class} & \textbf{Description}\\ \texttt{#1} & #2\\ \textbf{Syntax Example} & \textbf{Use Case}\\ \texttt{#3} & #4\\ \hline}

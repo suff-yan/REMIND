@@ -1,0 +1,42 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.500
+Python as labels and boxes.
+
+2
+00:00:04.100 --> 00:00:12.000
+In Python, x equals 5 does not put five inside x. It makes the name x point at a value.
+
+3
+00:00:12.000 --> 00:00:16.067
+Assigning again just moves the label to a new value.
+
+4
+00:00:18.067 --> 00:00:26.367
+Here a points at a list. Then b equals a makes b point at the very same list, not a copy.
+
+5
+00:00:26.367 --> 00:00:33.900
+So when b appends three, a sees it too. One list, two labels. This catches everyone at least once.
+
+6
+00:00:35.900 --> 00:00:44.967
+A dictionary maps keys to values. Almost every piece of data in Re-Mind is a dictionary, because dictionaries become JSON almost for free.
+
+7
+00:00:44.967 --> 00:00:47.500
+Update a field by its name.
+
+8
+00:00:49.500 --> 00:00:53.567
+Let's run a loop by hand. Total starts at zero.
+
+9
+00:00:53.567 --> 00:00:57.167
+Each pass gives s the next value, and total grows by s.
+
+10
+00:00:57.167 --> 00:01:06.600
+When the list runs out, the loop ends and total is three. Every RL episode in this course is a loop just like this.
+

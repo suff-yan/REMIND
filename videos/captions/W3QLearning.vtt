@@ -1,0 +1,34 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.133
+Q-learning, cell by cell.
+
+2
+00:00:02.733 --> 00:00:09.867
+Q-learning keeps a table: for every state and action, how good it expects things to be from there.
+
+3
+00:00:09.867 --> 00:00:20.100
+After every step it nudges one entry toward a target: the reward it just got, plus the best value it currently expects from the next state.
+
+4
+00:00:20.100 --> 00:00:26.867
+It's the running average from week zero again, except the target looks one step into the future.
+
+5
+00:00:27.467 --> 00:00:36.533
+Reach the exam hall for plus ten. Picking up your phone costs five and ends the episode. Every step costs a little time.
+
+6
+00:00:37.533 --> 00:00:50.133
+Watch value spread backwards from the exam, one update at a time, until arrows form a path.
+
+7
+00:00:50.133 --> 00:01:00.367
+Follow the arrows from the start: a shortest path to the exam that avoids both phones. Nobody told it the route. It learned from reward alone.
+
+8
+00:01:00.367 --> 00:01:05.200
+Next week, the exact same algorithm learns when to quiz a student.
+

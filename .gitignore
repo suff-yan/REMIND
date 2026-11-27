@@ -1,0 +1,13 @@
+.env
+venv/
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+# personal chat logs / memories created while running the bots
+chat_history.json
+context_history.json
+timebot_memory.json
+data/memory.json
+# mentor-only reference solutions (push to a private branch or release after deadlines)
+mentor_solutions/

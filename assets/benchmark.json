@@ -1,0 +1,42 @@
+{
+  "Every day": {
+    "reviews": 60.0,
+    "retention": 0.9948852985758089,
+    "exam_pass": 0.9995
+  },
+  "Every 2 days": {
+    "reviews": 30.0,
+    "retention": 0.9699136746512151,
+    "exam_pass": 0.9875
+  },
+  "Every 4 days": {
+    "reviews": 15.0,
+    "retention": 0.8328449985037495,
+    "exam_pass": 0.818
+  },
+  "Every week": {
+    "reviews": 9.0,
+    "retention": 0.612882783471154,
+    "exam_pass": 0.5405
+  },
+  "Leitner boxes": {
+    "reviews": 9.998,
+    "retention": 0.9331391768172779,
+    "exam_pass": 0.9535
+  },
+  "RL (good reward)": {
+    "reviews": 11.7615,
+    "retention": 0.9680333190819016,
+    "exam_pass": 0.984
+  },
+  "RL (+1 per correct)": {
+    "reviews": 52.474,
+    "retention": 0.9715572156646971,
+    "exam_pass": 0.9935
+  },
+  "RL (+gap length)": {
+    "reviews": 2.0695,
+    "retention": 0.21746238477966592,
+    "exam_pass": 0.0395
+  }
+}

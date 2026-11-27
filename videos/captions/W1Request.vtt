@@ -1,0 +1,42 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.500
+One request, end to end.
+
+2
+00:00:03.100 --> 00:00:12.167
+Gemini runs on Google's servers. Your app talks to it through an API, using Google's SDK, the waiter between you and the kitchen.
+
+3
+00:00:12.167 --> 00:00:20.833
+The API key is read from the .env file at runtime. It never sits in your code, and never goes to GitHub.
+
+4
+00:00:20.833 --> 00:00:27.600
+Your prompt travels out as a request, with the key attached so Google knows who is asking.
+
+5
+00:00:27.600 --> 00:00:32.033
+A moment later the answer comes back as response dot text.
+
+6
+00:00:32.033 --> 00:00:40.333
+Your app shows it, and saves the question, the answer and the time to a JSON file: the tutor's long-term memory.
+
+7
+00:00:40.933 --> 00:00:47.700
+Streamlit has one idea to understand. Every click or message re-runs your script from top to bottom.
+
+8
+00:00:47.700 --> 00:00:55.233
+So a normal variable is born again, empty, on every run. Anything that must survive goes in session state.
+
+9
+00:00:55.233 --> 00:01:00.933
+Three messages, three reruns: session state keeps growing, the plain variable starts empty each time.
+
+10
+00:01:00.933 --> 00:01:07.700
+Session state lasts as long as the browser tab. The JSON file lasts forever. You need both.
+

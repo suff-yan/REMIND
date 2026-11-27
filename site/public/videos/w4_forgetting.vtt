@@ -1,0 +1,38 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.133
+Forgetting and Leitner boxes.
+
+2
+00:00:02.733 --> 00:00:11.400
+Memory fades by the same fraction each stretch of days. Stability S is how many days until recall drops to ninety percent.
+
+3
+00:00:11.400 --> 00:00:14.133
+Bigger stability, slower forgetting.
+
+4
+00:00:15.133 --> 00:00:24.967
+Now review on days one, three, seven and fourteen. Each review resets recall to the top, and boosts stability, so the next dip is shallower.
+
+5
+00:00:24.967 --> 00:00:30.200
+Without reviews, the grey curve: most of it is gone in a month.
+
+6
+00:00:30.800 --> 00:00:41.000
+The classic rule: six boxes with growing gaps. A correct answer moves the card up a box. A wrong answer sends it back to box zero.
+
+7
+00:00:42.000 --> 00:00:44.500
+Right, right, right, then one slip, and it falls all the way back.
+
+8
+00:00:44.700 --> 00:00:53.367
+Leitner is strong. But on our simulated students it keeps ninety-nine percent of easy concepts, and only eighty-one percent of hard ones.
+
+9
+00:00:53.367 --> 00:01:00.900
+One fixed ladder can't fit every concept. A policy that adapts could do better, and that's what we'll train.
+
